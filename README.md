@@ -4,15 +4,16 @@
 A JavaScript utility library for safe and explicit type transformations.
 
 ## Features
-- addValues
-- stringifyValue
-- invertBoolean
-- convertToNumber
-- coerceToType
+
+- [addValues](#addvalues)
+- [stringifyValue](#stringifyvalue)
+- [invertBoolean](#invertboolean)
+- [convertToNumber](#converttonumber)
+- [coerceToType](#coercetotype)
 
 
 
-## 🚀 Installation & Usage
+## Installation & Usage
 
 📦 Option 1: Install via npm
 
@@ -39,10 +40,10 @@ console.log(convertToNumber("3.14"));   // → 3.14
 If you prefer to explore or modify the source code directly:
 
 ```
-git clone https://github.com/daniiar-pro/transformify.git
+git clone https://github.com/daniiar-pro/coercia.git
 ```
 ```
-cd transformify
+cd coercia
 npm install
 ```
 
@@ -61,7 +62,7 @@ console.log(stringifyValue({ key: "val" })); // → '{"key":"val"}'
 
 
 
-## addValues(a, b) — Supported Type Combinations
+## addValues 
 
 The addValues() function smartly handles different types and returns the appropriate result based on logical, real-world expectations.
 
@@ -127,7 +128,7 @@ This library prioritizes logical safety and clarity over permissive coercion. It
 
 
 
-## 🧵 stringifyValue(value) — Safe Universal Stringifier
+## stringifyValue
 
 The stringifyValue() function accepts a single argument of any type and returns a string representation of that value. It uses JSON.stringify() for objects and arrays, and String() for all other types.
 
@@ -173,7 +174,7 @@ This function is designed to provide a safe, consistent, and minimal-loss way to
 
 
 
-## 🔄 invertBoolean(bool) — Boolean Inversion Utility
+## invertBoolean
 
 The invertBoolean() function accepts a single boolean argument and returns its inverted value (true → false, false → true). If the input is not a boolean, it throws a clear and descriptive error.
 
@@ -226,9 +227,7 @@ invertBoolean(null);      // ❌ Error
 This function promotes strict type safety and eliminates ambiguity around coercion (like !!value tricks), ensuring clean, intentional boolean operations.
 
 
-
-
-## 🔢 convertToNumber(value) — Safe Type-to-Number Converter
+## convertToNumber
 
 The convertToNumber() function accepts a single argument of any type and attempts to convert it to a number using logical, safe rules. It throws an error for invalid or ambiguous input types.
 
@@ -299,7 +298,7 @@ This function prioritizes logical conversion paths and safe boundaries. It avoid
 
 
 
-## 🧪 coerceToType(value, type) — Safe Type Conversion Utility
+## coerceToType
 
 The coerceToType() function attempts to convert any input value to a specified primitive type ("string", "number", "boolean", "bigint", or "symbol"). It provides explicit control over coercion while preventing unsafe or illogical conversions.
 
