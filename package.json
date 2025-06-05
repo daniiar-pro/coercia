@@ -1,0 +1,23 @@
+{
+  "name": "coercia",
+  "version": "1.0.1",
+  "description": "Advanced data transformation utilities in JavaScript",
+  "main": "index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniiar-pro/transformify.git"
+  },
+  "keywords": [
+    "transform",
+    "convert",
+    "type-coercion",
+    "utilities"
+  ],
+  "author": "Daniiar Abdraiymov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniiar-pro/transformify/issues"
+  },
+  "homepage": "https://github.com/daniiar-pro/transformify#readme"
+}
