@@ -1,6 +1,6 @@
 {
   "name": "coercia",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Advanced data transformation utilities in JavaScript",
   "main": "index.js",
   "type": "module",
