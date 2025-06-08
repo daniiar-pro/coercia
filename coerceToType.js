@@ -1,5 +1,6 @@
 import { convertToNumber } from "./convertToNumber.js";
 import { stringifyValue } from "./stringifyValue.js";
+import { invertBoolean } from "./invertBoolean.js";
 
 /**
  * Attempts to convert a value to a specific JavaScript type.
@@ -34,7 +35,7 @@ export function coerceToType(value, type) {
   }
 
   if (type === "boolean") {
-    return Boolean(value);
+    return invertBoolean(!value);
   }
 
   if (type === "bigint") {
@@ -63,7 +64,7 @@ export function coerceToType(value, type) {
 // console.log(coerceToType(true, "number")); // → 1
 // console.log(coerceToType(false, "string")); // → "false"
 // console.log(coerceToType("42", "bigint")); // → 42n
-// console.log(coerceToType(0, "boolean")); // → false
+console.log(coerceToType(0, "boolean")); // → false
 // console.log(coerceToType(123, "symbol")); // → Symbol(123)
 
 // Invalid conversion
