@@ -10,6 +10,7 @@ A JavaScript utility library for safe and explicit type transformations.
 - [invertBoolean](#invertboolean)
 - [convertToNumber](#converttonumber)
 - [coerceToType](#coercetotype)
+- [isPlainObject](#isplainobject)
 
 
 
@@ -369,3 +370,31 @@ Perfect for use in:
 - Parsing loose inputs safely
 
 
+## isPlainObject
+
+The `isPlainObject()` function checks whether a given value is a plain JavaScript object (i.e., created using `{}` or `new Object()`), excluding arrays, functions, `null`, class instances, and other built-in types.
+
+✅ **Purpose**  
+It helps safely determine if a value is a basic object literal, which is useful when doing shallow merges, validating inputs, or guarding against prototype pollution.
+
+---
+
+### ✅ Usage Examples
+
+```
+isPlainObject({});                      // → true
+isPlainObject({ key: "value" });        // → true
+isPlainObject(Object.create(null));     // → true
+
+isPlainObject(null);                    // → false
+isPlainObject([]);                      // → false
+isPlainObject(() => {});                // → false
+isPlainObject(new Date());              // → false
+isPlainObject(new (class {})());        // → false
+```
+
+🧠 Design Philosophy
+
+
+Many JavaScript type checks fail for edge cases (like typeof null === "object" or arrays being treated as objects).
+This utility solves that by checking the object’s internal prototype chain.
