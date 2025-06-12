@@ -64,7 +64,7 @@ export function coerceToType(value, type) {
 // console.log(coerceToType(true, "number")); // → 1
 // console.log(coerceToType(false, "string")); // → "false"
 // console.log(coerceToType("42", "bigint")); // → 42n
-console.log(coerceToType(0, "boolean")); // → false
+// console.log(coerceToType(0, "boolean")); // → false
 // console.log(coerceToType(123, "symbol")); // → Symbol(123)
 
 // Invalid conversion
